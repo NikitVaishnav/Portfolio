@@ -1,6 +1,6 @@
 /**
- * Nikita Vaishnav — Portfolio Interactive Script
- * Features: Theme toggle, dynamic role typer, scroll spy, modal, filters, contact form AJAX, toast notifications.
+ * Nikita Vaishnav — Portfolio Interactive Script ✦
+ * Luxury Editorial Edition
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initMobileNav();
     initCopyrightYear();
+    initDiamondSparkleClick();
     initLucideIcons();
 });
 
@@ -24,23 +25,21 @@ function initTheme() {
     const htmlEl = document.documentElement;
     const themeBtn = document.getElementById('theme-toggle-btn');
     
-    // Check localStorage or system preference
     const savedTheme = localStorage.getItem('nikita_portfolio_theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    const activeTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    const activeTheme = savedTheme || 'light';
     setTheme(activeTheme);
 
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
-            const currentTheme = htmlEl.getAttribute('data-theme') || 'dark';
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            const currentTheme = htmlEl.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             setTheme(newTheme);
         });
     }
 
     function setTheme(theme) {
         htmlEl.setAttribute('data-theme', theme);
+        document.body.className = `theme-${theme}`;
         localStorage.setItem('nikita_portfolio_theme', theme);
         initLucideIcons();
     }
@@ -102,17 +101,17 @@ function initDynamicRoleTyper() {
     if (!roleElement) return;
 
     const roles = [
-        "React Frontend Developer",
-        "Full Stack Web Developer",
-        "REST API & UI Specialist",
-        "MCA Candidate @ RCOEM",
-        "Component Architect"
+        "React Frontend Architecture",
+        "Full Stack Web Applications",
+        "REST API & Cloud Workflows",
+        "Component-Driven UI Design",
+        "MCA Candidate @ RCOEM"
     ];
 
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let typingSpeed = 90;
+    let typingSpeed = 80;
 
     function type() {
         const currentRole = roles[roleIndex];
@@ -120,16 +119,15 @@ function initDynamicRoleTyper() {
         if (isDeleting) {
             roleElement.textContent = currentRole.substring(0, charIndex - 1);
             charIndex--;
-            typingSpeed = 45;
+            typingSpeed = 40;
         } else {
             roleElement.textContent = currentRole.substring(0, charIndex + 1);
             charIndex++;
-            typingSpeed = 90;
+            typingSpeed = 80;
         }
 
         if (!isDeleting && charIndex === currentRole.length) {
-            // Pause at end of text
-            typingSpeed = 2000;
+            typingSpeed = 2200;
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
@@ -155,15 +153,18 @@ function initSkillFilters() {
         btn.addEventListener('click', () => {
             const targetCategory = btn.getAttribute('data-category');
 
-            // Update active button state
-            filterButtons.forEach(b => b.classList.remove('active'));
+            filterButtons.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-selected', 'false');
+            });
             btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
 
-            // Filter category cards
             categoryCards.forEach(card => {
                 const group = card.getAttribute('data-category-group');
                 if (targetCategory === 'all' || group === targetCategory) {
                     card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.35s ease forwards';
                     card.classList.remove('hidden');
                 } else {
                     card.style.display = 'none';
@@ -179,22 +180,21 @@ function initSkillFilters() {
    -------------------------------------------------------------------------- */
 function initProjectFilters() {
     const filterButtons = document.querySelectorAll('.project-filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+    const projectCards = document.querySelectorAll('.editorial-project-card');
     if (!filterButtons.length || !projectCards.length) return;
 
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const targetFilter = btn.getAttribute('data-filter');
 
-            // Toggle active state
             filterButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            // Filter cards
             projectCards.forEach(card => {
                 const category = card.getAttribute('data-category');
                 if (targetFilter === 'all' || category === targetFilter) {
                     card.style.display = 'flex';
+                    card.style.animation = 'fadeIn 0.35s ease forwards';
                     card.classList.remove('hidden');
                 } else {
                     card.style.display = 'none';
@@ -222,10 +222,8 @@ function initProjectModal() {
 
     if (!modalBackdrop) return;
 
-    // Get projects data from injected global object or DOM
     const projectsData = (window.PORTFOLIO_DATA && window.PORTFOLIO_DATA.projects) || [];
 
-    // Open modal buttons
     document.addEventListener('click', (e) => {
         const trigger = e.target.closest('.btn-open-modal');
         if (!trigger) return;
@@ -235,22 +233,20 @@ function initProjectModal() {
 
         if (project) {
             modalTitle.textContent = project.title;
-            modalBadge.textContent = project.badge || 'Featured Project';
+            modalBadge.textContent = (project.badge || 'Featured Project') + ' ✦';
             modalSummary.textContent = project.summary;
             modalDesc.textContent = project.description;
 
-            // Render Metrics
             modalMetrics.innerHTML = '';
             if (project.metrics && project.metrics.length) {
                 project.metrics.forEach(metric => {
                     const li = document.createElement('li');
                     li.className = 'modal-metric-item';
-                    li.innerHTML = `<i data-lucide="check-circle" style="width:16px;height:16px;color:var(--accent-emerald)"></i><span>${metric}</span>`;
+                    li.innerHTML = `<span style="font-weight:bold;margin-right:6px;">✦</span><span>${metric}</span>`;
                     modalMetrics.appendChild(li);
                 });
             }
 
-            // Render Stack
             modalStack.innerHTML = '';
             if (project.tech_stack && project.tech_stack.length) {
                 project.tech_stack.forEach(tech => {
@@ -261,7 +257,6 @@ function initProjectModal() {
                 });
             }
 
-            // Links
             if (modalGithubLink) {
                 modalGithubLink.href = project.github_url || 'https://github.com/NikitVaishnav';
             }
@@ -315,10 +310,8 @@ function initContactForm() {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Clear existing errors
         clearFormErrors();
 
-        // Form Fields
         const nameInput = document.getElementById('contact-name');
         const emailInput = document.getElementById('contact-email');
         const subjectInput = document.getElementById('contact-subject');
@@ -329,7 +322,6 @@ function initContactForm() {
         const subject = subjectInput ? subjectInput.value.trim() : '';
         const message = messageInput.value.trim();
 
-        // Client-side validation
         let isValid = true;
 
         if (!name || name.length < 2) {
@@ -344,13 +336,12 @@ function initContactForm() {
         }
 
         if (!message || message.length < 5) {
-            showFieldError(messageInput, 'message-error', 'Please enter a message (at least 5 characters).');
+            showFieldError(messageInput, 'message-error', 'Please write a message (at least 5 characters).');
             isValid = false;
         }
 
         if (!isValid) return;
 
-        // Set Loading State
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
 
@@ -367,14 +358,14 @@ function initContactForm() {
             const result = await response.json();
 
             if (response.ok && result.success) {
-                showToast(result.message || "Thank you! Your message has been sent successfully.", 'success');
+                showToast(result.message || "Thank you! Your message has been received. ✦", 'success');
                 contactForm.reset();
             } else {
                 showToast(result.detail || "Something went wrong. Please try emailing directly.", 'error');
             }
         } catch (error) {
             console.error('Submission error:', error);
-            showToast("Network error. Please email directly to nikitavaishnav1703@gmail.com", 'error');
+            showToast("Network error. Please email directly to nikitavaishnav1703@gmail.com ✦", 'error');
         } finally {
             submitBtn.classList.remove('loading');
             submitBtn.disabled = false;
@@ -405,24 +396,20 @@ function showToast(message, type = 'success') {
     const toast = document.createElement('div');
     toast.className = `toast toast-${type}`;
 
-    const iconHtml = type === 'success'
-        ? '<i data-lucide="check-circle-2" class="toast-icon"></i>'
-        : '<i data-lucide="alert-circle" class="toast-icon"></i>';
+    const icon = type === 'success' ? '✦' : '⚠️';
 
     toast.innerHTML = `
-        ${iconHtml}
+        <span style="font-size:1.1rem;font-weight:bold;">${icon}</span>
         <span class="toast-message">${message}</span>
     `;
 
     container.appendChild(toast);
-    initLucideIcons();
 
-    // Auto remove after 5 seconds
     setTimeout(() => {
         toast.style.opacity = '0';
         toast.style.transform = 'translateY(10px)';
-        toast.style.transition = 'all 0.3s ease';
-        setTimeout(() => toast.remove(), 300);
+        toast.style.transition = 'all 0.35s ease';
+        setTimeout(() => toast.remove(), 350);
     }, 5000);
 }
 
@@ -467,7 +454,47 @@ function initMobileNav() {
 }
 
 /* --------------------------------------------------------------------------
-   11. Copyright Year Auto-updater
+   11. Micro-Interaction: Diamond Star Click Effect
+   -------------------------------------------------------------------------- */
+function initDiamondSparkleClick() {
+    const symbols = ['✦', '✧', '⋆'];
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('button, .btn, .nav-link, .dark-pill-item, .editorial-project-card, .phone-mockup-frame')) return;
+
+        const particle = document.createElement('span');
+        particle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        particle.style.position = 'fixed';
+        particle.style.left = `${e.clientX}px`;
+        particle.style.top = `${e.clientY}px`;
+        particle.style.fontSize = '1.2rem';
+        particle.style.color = '#24151E';
+        particle.style.pointerEvents = 'none';
+        particle.style.zIndex = '9999';
+        particle.style.transform = 'translate(-50%, -50%) scale(0.6)';
+        particle.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        particle.style.opacity = '1';
+
+        document.body.appendChild(particle);
+
+        requestAnimationFrame(() => {
+            const angle = Math.random() * Math.PI * 2;
+            const distance = 25 + Math.random() * 20;
+            const destX = Math.cos(angle) * distance;
+            const destY = Math.sin(angle) * distance - 15;
+
+            particle.style.transform = `translate(calc(-50% + ${destX}px), calc(-50% + ${destY}px)) scale(1.2)`;
+            particle.style.opacity = '0';
+        });
+
+        setTimeout(() => {
+            particle.remove();
+        }, 500);
+    });
+}
+
+/* --------------------------------------------------------------------------
+   12. Copyright Year Auto-updater
    -------------------------------------------------------------------------- */
 function initCopyrightYear() {
     const yearEl = document.getElementById('current-year');
@@ -477,7 +504,7 @@ function initCopyrightYear() {
 }
 
 /* --------------------------------------------------------------------------
-   12. Lucide Icons Helper
+   13. Lucide Icons Helper
    -------------------------------------------------------------------------- */
 function initLucideIcons() {
     if (typeof lucide !== 'undefined' && lucide.createIcons) {

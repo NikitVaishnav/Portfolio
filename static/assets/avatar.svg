@@ -1,56 +1,75 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
   <defs>
     <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06b6d4" />
-      <stop offset="50%" stop-color="#3b82f6" />
-      <stop offset="100%" stop-color="#8b5cf6" />
+      <stop offset="0%" stop-color="#FF69B4" />
+      <stop offset="50%" stop-color="#F43F8E" />
+      <stop offset="100%" stop-color="#E0218A" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F5" />
+      <stop offset="100%" stop-color="#FFE4E9" />
     </linearGradient>
     <linearGradient id="faceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fed7aa" />
-      <stop offset="100%" stop-color="#fcd34d" />
+      <stop offset="0%" stop-color="#FFF0F5" />
+      <stop offset="100%" stop-color="#FED7AA" />
     </linearGradient>
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feGaussianBlur stdDeviation="10" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
   <!-- Glowing Background Circle -->
-  <circle cx="200" cy="200" r="180" fill="#0f172a" stroke="url(#avatarGrad)" stroke-width="6" filter="url(#glow)"/>
+  <circle cx="200" cy="200" r="180" fill="url(#bgGrad)" stroke="#FFB6C1" stroke-width="5" filter="url(#glow)"/>
 
-  <!-- Code Particle Orbit Lines -->
-  <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(6, 182, 212, 0.25)" stroke-width="2" stroke-dasharray="8 12"/>
+  <!-- Dreamy Particle Orbit Lines -->
+  <circle cx="200" cy="200" r="145" fill="none" stroke="#FF69B4" stroke-width="2" stroke-dasharray="6 10" opacity="0.4"/>
   
   <!-- Stylized Developer Persona -->
-  <!-- Shoulders / Jacket -->
-  <path d="M 110 330 C 110 260, 290 260, 290 330 Z" fill="url(#avatarGrad)" opacity="0.9"/>
-  <!-- Inner shirt -->
-  <polygon points="175,270 225,270 200,315" fill="#0f172a"/>
+  <!-- Shoulders / Blouse -->
+  <path d="M 105 340 C 105 255, 295 255, 295 340 Z" fill="url(#avatarGrad)" opacity="0.95"/>
   
   <!-- Neck -->
-  <rect x="185" y="220" width="30" height="40" fill="#fed7aa" rx="6"/>
-  
+  <rect x="186" y="215" width="28" height="42" fill="#FED7AA" rx="6"/>
+  <!-- Cute Pearl Necklace -->
+  <circle cx="178" cy="255" r="4" fill="#FFFFFF" stroke="#FFB6C1" stroke-width="1"/>
+  <circle cx="189" cy="258" r="4.5" fill="#FFFFFF" stroke="#FFB6C1" stroke-width="1"/>
+  <circle cx="200" cy="260" r="5" fill="#FFE9C4" stroke="#FF69B4" stroke-width="1"/>
+  <circle cx="211" cy="258" r="4.5" fill="#FFFFFF" stroke="#FFB6C1" stroke-width="1"/>
+  <circle cx="222" cy="255" r="4" fill="#FFFFFF" stroke="#FFB6C1" stroke-width="1"/>
+
   <!-- Head / Face -->
-  <ellipse cx="200" cy="180" rx="45" ry="55" fill="#fed7aa"/>
+  <ellipse cx="200" cy="175" rx="44" ry="54" fill="#FED7AA"/>
   
-  <!-- Hair (Modern sleek style) -->
-  <path d="M 150 170 C 145 120, 255 120, 250 170 C 245 150, 240 140, 200 140 C 160 140, 155 150, 150 170 Z" fill="#1e293b"/>
-  <path d="M 152 170 C 145 200, 140 235, 150 245 C 153 220, 160 200, 160 180 Z" fill="#1e293b"/>
-  <path d="M 248 170 C 255 200, 260 235, 250 245 C 247 220, 240 200, 240 180 Z" fill="#1e293b"/>
+  <!-- Soft Blush on Cheeks -->
+  <ellipse cx="174" cy="188" rx="10" ry="6" fill="#FF69B4" opacity="0.35"/>
+  <ellipse cx="226" cy="188" rx="10" ry="6" fill="#FF69B4" opacity="0.35"/>
 
-  <!-- Stylish Glasses -->
-  <rect x="165" y="168" width="28" height="20" rx="4" fill="none" stroke="#06b6d4" stroke-width="3"/>
-  <rect x="207" y="168" width="28" height="20" rx="4" fill="none" stroke="#06b6d4" stroke-width="3"/>
-  <line x1="193" y1="178" x2="207" y2="178" stroke="#06b6d4" stroke-width="3"/>
-  <circle cx="179" cy="178" r="4" fill="#06b6d4"/>
-  <circle cx="221" cy="178" r="4" fill="#06b6d4"/>
+  <!-- Hair (Sleek brunette style with soft waves) -->
+  <path d="M 148 165 C 142 110, 258 110, 252 165 C 248 145, 240 135, 200 135 C 160 135, 152 145, 148 165 Z" fill="#4A1D36"/>
+  <path d="M 150 165 C 142 195, 138 235, 148 250 C 152 225, 158 200, 158 178 Z" fill="#4A1D36"/>
+  <path d="M 250 165 C 258 195, 262 235, 252 250 C 248 225, 242 200, 242 178 Z" fill="#4A1D36"/>
 
-  <!-- Warm Smile -->
-  <path d="M 188 212 Q 200 222 212 212" fill="none" stroke="#ea580c" stroke-width="3" stroke-linecap="round"/>
+  <!-- Cute Ribbon Hair Bow -->
+  <path d="M 230 130 C 242 120, 255 125, 248 138 C 242 135, 235 133, 230 130 Z" fill="#FF69B4"/>
+  <path d="M 230 130 C 220 120, 212 132, 222 138 C 225 135, 228 133, 230 130 Z" fill="#FF69B4"/>
+  <circle cx="230" cy="132" r="4" fill="#FFE9C4"/>
 
-  <!-- Floating Tech Symbols -->
-  <text x="75" y="120" fill="#06b6d4" font-family="monospace" font-size="22" font-weight="bold">&lt;React/&gt;</text>
-  <text x="270" y="130" fill="#8b5cf6" font-family="monospace" font-size="20" font-weight="bold">{JS}</text>
-  <text x="60" y="270" fill="#10b981" font-family="monospace" font-size="22" font-weight="bold">API ⚡</text>
-  <text x="280" y="280" fill="#f59e0b" font-family="monospace" font-size="22" font-weight="bold">MCA 🎓</text>
+  <!-- Cute Glasses -->
+  <rect x="166" y="165" width="28" height="19" rx="5" fill="none" stroke="#FF69B4" stroke-width="2.5"/>
+  <rect x="206" y="165" width="28" height="19" rx="5" fill="none" stroke="#FF69B4" stroke-width="2.5"/>
+  <line x1="194" y1="174" x2="206" y2="174" stroke="#FF69B4" stroke-width="2.5"/>
+  <circle cx="180" cy="174" r="3.5" fill="#4A1D36"/>
+  <circle cx="220" cy="174" r="3.5" fill="#4A1D36"/>
+  <circle cx="181.5" cy="172.5" r="1" fill="#FFFFFF"/>
+  <circle cx="221.5" cy="172.5" r="1" fill="#FFFFFF"/>
+
+  <!-- Sweet Smile -->
+  <path d="M 190 206 Q 200 216 210 206" fill="none" stroke="#E0218A" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Floating Sparkles & Coquette Badges -->
+  <text x="65" y="115" fill="#FF69B4" font-family="'Playfair Display', serif" font-size="20" font-weight="bold">React ♡</text>
+  <text x="270" y="125" fill="#E0218A" font-family="'Playfair Display', serif" font-size="19" font-weight="bold">✦ {JS}</text>
+  <text x="55" y="270" fill="#FB7185" font-family="'Playfair Display', serif" font-size="20" font-weight="bold">API 🎀</text>
+  <text x="280" y="280" fill="#F59E0B" font-family="'Playfair Display', serif" font-size="20" font-weight="bold">MCA ✨</text>
 </svg>

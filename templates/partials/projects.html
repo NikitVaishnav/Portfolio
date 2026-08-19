@@ -1,58 +1,57 @@
-<section id="projects" class="section projects-section">
+<section id="projects" class="section projects-section editorial-marble-bg">
     <div class="container">
         <!-- Section Header -->
         <div class="section-header text-center">
-            <span class="section-badge"><i data-lucide="folder-git-2"></i> Showcase</span>
-            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <span class="sparkle-diamond-title">✦</span>
+            <h2 class="section-title editorial-title">PREVIOUS WORK</h2>
+            <span class="sparkle-diamond-title">✧</span>
+            <div class="editorial-title-rule"></div>
             <p class="section-subtitle">A curated selection of full-stack web applications, real-time messaging tools, and machine learning systems.</p>
         </div>
 
         <!-- Filter Controls -->
         <div class="projects-filter-bar" role="group" aria-label="Filter Projects">
-            <button class="project-filter-btn active" data-filter="all">All Projects ({{ projects | length }})</button>
-            <button class="project-filter-btn" data-filter="fullstack">Full Stack</button>
-            <button class="project-filter-btn" data-filter="realtime">Real-Time WebSockets</button>
-            <button class="project-filter-btn" data-filter="aiml">AI &amp; Machine Learning</button>
-            <button class="project-filter-btn" data-filter="dashboard">Dashboards &amp; Analytics</button>
+            <button class="project-filter-btn active" data-filter="all">ALL PROJECTS ({{ projects | length }})</button>
+            <button class="project-filter-btn" data-filter="fullstack">FULL STACK ✦</button>
+            <button class="project-filter-btn" data-filter="realtime">REAL-TIME WEBSOCKETS</button>
+            <button class="project-filter-btn" data-filter="aiml">AI &amp; MACHINE LEARNING</button>
+            <button class="project-filter-btn" data-filter="dashboard">DASHBOARDS</button>
         </div>
 
-        <!-- Projects Grid -->
+        <!-- Projects Grid Showcase (Part 1) -->
         <div class="projects-grid">
             {% for project in projects %}
-            <article class="project-card card glass-card" data-category="{{ project.category }}" data-project-id="{{ project.id }}">
-                <!-- Card Top Bar -->
+            <article class="editorial-project-card" data-category="{{ project.category }}" data-project-id="{{ project.id }}">
+                <!-- Card Header -->
                 <div class="project-card-header">
-                    <div class="project-category-badge">
-                        <span class="category-indicator-dot"></span>
-                        <span>{{ project.badge }}</span>
-                    </div>
+                    <span class="editorial-category-tag">{{ project.badge | upper }} ✦</span>
                     <div class="project-card-links">
-                        <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source on GitHub" aria-label="GitHub Repository">
+                        <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="project-icon-btn" title="View Source" aria-label="GitHub Repository">
                             <i data-lucide="github"></i>
                         </a>
-                        <button class="project-link-icon btn-open-modal" data-project-id="{{ project.id }}" title="View Project Details" aria-label="Open Project Details">
+                        <button class="project-icon-btn btn-open-modal" data-project-id="{{ project.id }}" title="Details" aria-label="Open Project Details">
                             <i data-lucide="maximize-2"></i>
                         </button>
                     </div>
                 </div>
 
-                <!-- Project Title & Summary -->
+                <!-- Card Body -->
                 <div class="project-card-body">
                     <h3 class="project-title">{{ project.title }}</h3>
                     <p class="project-summary">{{ project.summary }}</p>
 
-                    <!-- Key Metrics / Engineering Highlights -->
+                    <!-- Metrics Badges -->
                     <div class="project-metrics-wrap">
                         {% for metric in project.metrics %}
-                        <div class="metric-pill">
-                            <i data-lucide="check" class="metric-icon"></i>
+                        <div class="editorial-metric-pill">
+                            <span class="metric-star">✦</span>
                             <span>{{ metric }}</span>
                         </div>
                         {% endfor %}
                     </div>
                 </div>
 
-                <!-- Tech Stack Badges Footer -->
+                <!-- Card Footer -->
                 <div class="project-card-footer">
                     <div class="project-tech-tags">
                         {% for tech in project.tech_stack %}
@@ -61,16 +60,99 @@
                     </div>
                     
                     <div class="project-action-row">
-                        <button class="btn btn-sm btn-outline btn-open-modal" data-project-id="{{ project.id }}">
-                            <i data-lucide="file-text"></i> Architecture &amp; Info
+                        <button class="btn btn-sm btn-dark btn-open-modal" data-project-id="{{ project.id }}">
+                            <i data-lucide="file-text"></i> DETAILS ✦
                         </button>
                         <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
-                            <i data-lucide="github"></i> Code
+                            <i data-lucide="github"></i> CODE
                         </a>
                     </div>
                 </div>
             </article>
             {% endfor %}
+        </div>
+
+        <!-- Interactive Mobile Device Mockups Showcase (Matching Reference 0:03 Phone Frames) -->
+        <div class="mockups-showcase-section">
+            <div class="mockups-section-header text-center">
+                <span class="sparkle-diamond-title">✦</span>
+                <h3 class="mockups-title">FEATURED APP SPOTLIGHTS</h3>
+                <span class="sparkle-diamond-title">✧</span>
+            </div>
+
+            <div class="phone-mockups-row">
+                <!-- Phone 1: Flight Booking -->
+                <div class="phone-mockup-frame btn-open-modal" data-project-id="flight-booking-system" title="Click to inspect Flight Booking System">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen screen-flight">
+                        <div class="screen-header-bar">
+                            <span class="screen-app-badge">AIRLINE RESERVATION</span>
+                            <span class="screen-status-dot"></span>
+                        </div>
+                        <div class="screen-content-preview">
+                            <h4 class="screen-app-name">Flight Booking</h4>
+                            <p class="screen-app-sub">Spring Boot + React</p>
+                            <div class="screen-feature-chip">JWT Auth &amp; MySQL</div>
+                            <div class="screen-cta-pill">View Specs ✦</div>
+                        </div>
+                    </div>
+                    <span class="phone-caption">Flight System ✦</span>
+                </div>
+
+                <!-- Phone 2: ChatApp Real-Time -->
+                <div class="phone-mockup-frame btn-open-modal" data-project-id="chatapp" title="Click to inspect ChatApp">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen screen-chat">
+                        <div class="screen-header-bar">
+                            <span class="screen-app-badge">REAL-TIME MESSENGER</span>
+                            <span class="screen-status-dot"></span>
+                        </div>
+                        <div class="screen-content-preview">
+                            <h4 class="screen-app-name">ChatApp</h4>
+                            <p class="screen-app-sub">Socket.IO &amp; WebSockets</p>
+                            <div class="screen-feature-chip">&lt;50ms Latency</div>
+                            <div class="screen-cta-pill">View Specs ✦</div>
+                        </div>
+                    </div>
+                    <span class="phone-caption">ChatApp Messenger ✦</span>
+                </div>
+
+                <!-- Phone 3: Disease Prediction ML -->
+                <div class="phone-mockup-frame btn-open-modal" data-project-id="disease-prediction" title="Click to inspect Disease Prediction">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen screen-ml">
+                        <div class="screen-header-bar">
+                            <span class="screen-app-badge">AI / ML HEALTH</span>
+                            <span class="screen-status-dot"></span>
+                        </div>
+                        <div class="screen-content-preview">
+                            <h4 class="screen-app-name">Health AI System</h4>
+                            <p class="screen-app-sub">Machine Learning &amp; Flask</p>
+                            <div class="screen-feature-chip">94%+ Accuracy</div>
+                            <div class="screen-cta-pill">View Specs ✦</div>
+                        </div>
+                    </div>
+                    <span class="phone-caption">AI Healthcare ✦</span>
+                </div>
+
+                <!-- Phone 4: Sales Analytics Dashboard -->
+                <div class="phone-mockup-frame btn-open-modal" data-project-id="sales-analytics" title="Click to inspect Sales Analytics">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen screen-dashboard">
+                        <div class="screen-header-bar">
+                            <span class="screen-app-badge">METRICS &amp; BI</span>
+                            <span class="screen-status-dot"></span>
+                        </div>
+                        <div class="screen-content-preview">
+                            <h4 class="screen-app-name">Sales Dashboard</h4>
+                            <p class="screen-app-sub">Data Viz &amp; Charts</p>
+                            <div class="screen-feature-chip">Instant Aggregations</div>
+                            <div class="screen-cta-pill">View Specs ✦</div>
+                        </div>
+                    </div>
+                    <span class="phone-caption">Analytics Dashboard ✦</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -1,29 +1,31 @@
-<section id="education" class="section education-section">
+<section id="education" class="section education-section editorial-nude-bg">
     <div class="container">
         <!-- Section Header -->
         <div class="section-header text-center">
-            <span class="section-badge"><i data-lucide="graduation-cap"></i> Academics</span>
-            <h2 class="section-title">Education &amp; <span class="gradient-text">Certifications</span></h2>
-            <p class="section-subtitle">Formal computer science education, cloud certifications, and continuous technical upskilling.</p>
+            <span class="sparkle-diamond-title">✦</span>
+            <h2 class="section-title editorial-title">EDUCATION &amp; CREDENTIALS</h2>
+            <span class="sparkle-diamond-title">✧</span>
+            <div class="editorial-title-rule"></div>
+            <p class="section-subtitle">Formal computer science foundation, cloud credentials, and continuous technical upskilling.</p>
         </div>
 
         <div class="education-grid">
             <!-- Left: Degree Programs -->
             <div class="education-degrees-column">
                 <div class="column-header">
-                    <i data-lucide="book-open" class="text-accent"></i>
-                    <h3 class="column-title">Academic Qualifications</h3>
+                    <i data-lucide="graduation-cap" class="text-accent"></i>
+                    <h3 class="column-title">ACADEMIC QUALIFICATIONS ✦</h3>
                 </div>
 
                 <div class="degrees-list">
                     {% for edu in education %}
-                    <div class="card glass-card degree-card">
+                    <div class="white-degree-card">
                         <div class="degree-card-top">
                             <div class="degree-icon-wrap">
                                 <i data-lucide="graduation-cap"></i>
                             </div>
                             <div class="degree-titles">
-                                <span class="degree-badge">{{ edu.badge }}</span>
+                                <span class="degree-badge">{{ edu.badge | upper }} ✦</span>
                                 <h4 class="degree-name">{{ edu.degree }}</h4>
                                 <h5 class="institution-name text-accent">{{ edu.institution }}</h5>
                             </div>
@@ -42,23 +44,23 @@
             <div class="certifications-column">
                 <div class="column-header">
                     <i data-lucide="award" class="text-accent"></i>
-                    <h3 class="column-title">Certifications &amp; Credentials</h3>
+                    <h3 class="column-title">CERTIFICATIONS &amp; CREDENTIALS ✦</h3>
                 </div>
 
                 <div class="certs-list">
                     {% for cert in certifications %}
-                    <div class="card glass-card cert-card cert-{{ cert.color }}">
+                    <div class="white-cert-card cert-{{ cert.color }}">
                         <div class="cert-icon-wrapper">
                             {% if cert.icon == 'cloud' %}
                                 <i data-lucide="cloud"></i>
                             {% elif cert.icon == 'cloud-lightning' %}
-                                <i data-lucide="cloud-lightning"></i>
+                                <i data-lucide="sparkles"></i>
                             {% else %}
-                                <i data-lucide="layers"></i>
+                                <i data-lucide="award"></i>
                             {% endif %}
                         </div>
                         <div class="cert-details">
-                            <span class="cert-tag">{{ cert.tag }}</span>
+                            <span class="cert-tag">{{ cert.tag | upper }} ✦</span>
                             <h4 class="cert-title">{{ cert.title }}</h4>
                             <span class="cert-issuer">Issued by: <strong>{{ cert.issuer }}</strong></span>
                         </div>
@@ -67,13 +69,13 @@
                 </div>
 
                 <!-- Learning Focus Card -->
-                <div class="card glass-card active-learning-card">
-                    <h4 class="active-learning-heading">
+                <div class="white-roadmap-card">
+                    <h4 class="roadmap-heading">
                         <i data-lucide="sparkles" class="text-accent"></i>
-                        Active Skill Roadmap
+                        ACTIVE SKILL ROADMAP ✦
                     </h4>
-                    <p class="active-learning-text">
-                        Deepening algorithmic problem-solving with Data Structures &amp; Algorithms, mastering TypeScript for type-safe applications, and exploring advanced React design patterns.
+                    <p class="roadmap-text">
+                        Deepening algorithmic problem-solving with Data Structures &amp; Algorithms, mastering TypeScript for enterprise applications, and exploring advanced React state patterns.
                     </p>
                 </div>
             </div>

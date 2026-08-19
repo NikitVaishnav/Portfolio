@@ -1,10 +1,12 @@
-<section id="experience" class="section experience-section">
+<section id="experience" class="section experience-section editorial-marble-bg">
     <div class="container">
         <!-- Section Header -->
         <div class="section-header text-center">
-            <span class="section-badge"><i data-lucide="briefcase"></i> Career</span>
-            <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
-            <p class="section-subtitle">Hands-on experience delivering user-facing features, API integrations, and maintainable frontend solutions.</p>
+            <span class="sparkle-diamond-title">✦</span>
+            <h2 class="section-title editorial-title">WORK EXPERIENCE</h2>
+            <span class="sparkle-diamond-title">✧</span>
+            <div class="editorial-title-rule"></div>
+            <p class="section-subtitle">Delivering production-grade frontend features, robust API integrations, and collaborative developer workflows.</p>
         </div>
 
         <!-- Experience Timeline -->
@@ -20,15 +22,15 @@
                 </div>
 
                 <!-- Timeline Content Card -->
-                <div class="timeline-card card glass-card">
+                <div class="editorial-timeline-card">
                     <div class="timeline-header">
                         <div class="role-company-group">
-                            <h3 class="experience-role">{{ exp.role }}</h3>
+                            <h3 class="experience-role">{{ exp.role }} ✦</h3>
                             <div class="company-row">
                                 <span class="company-name text-accent"><i data-lucide="building-2"></i> {{ exp.company }}</span>
                                 <span class="location-badge"><i data-lucide="map-pin"></i> {{ exp.location }}</span>
                                 {% if exp.is_current %}
-                                <span class="badge badge-success">Current Role</span>
+                                <span class="badge badge-success">CURRENT ROLE ✦</span>
                                 {% endif %}
                             </div>
                         </div>
@@ -43,12 +45,12 @@
 
                     <!-- Achievements List -->
                     <div class="achievements-container">
-                        <h4 class="achievements-title"><i data-lucide="check-square"></i> Key Responsibilities &amp; Impact:</h4>
+                        <h4 class="achievements-title"><i data-lucide="check-square"></i> KEY RESPONSIBILITIES &amp; IMPACT ✦</h4>
                         <div class="achievements-grid">
                             {% for ach in exp.achievements %}
                             <div class="achievement-card">
                                 <div class="achievement-header">
-                                    <span class="bullet-dot"></span>
+                                    <span class="bullet-dot">✦</span>
                                     <strong class="achievement-title-text">{{ ach.title }}</strong>
                                 </div>
                                 <p class="achievement-detail">{{ ach.detail }}</p>
@@ -59,7 +61,7 @@
 
                     <!-- Technologies Used Footer -->
                     <div class="experience-tech-footer">
-                        <span class="tech-label">Core Technologies:</span>
+                        <span class="tech-label">CORE STACK ✦:</span>
                         <div class="tech-tags-list">
                             {% for tech in exp.tech_stack %}
                             <span class="tech-badge">{{ tech }}</span>
