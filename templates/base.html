@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <!-- SEO & Metadata -->
     <title>{{ personal.name }} | {{ personal.title }} ✦</title>
-    <meta name="description" content="{{ personal.name }} — {{ personal.headline }} Experienced in React.js, Full Stack Development, REST APIs, and modern web architectures.">
-    <meta name="keywords" content="Nikita Vaishnav, React Developer, Full Stack Developer, Web Developer, Frontend Engineer, Portfolio, Python, FastAPI, JavaScript, Spring Boot">
+    <meta name="description"
+        content="{{ personal.name }} — {{ personal.headline }} Experienced in React.js, Full Stack Development, REST APIs, and modern web architectures.">
+    <meta name="keywords"
+        content="Nikita Vaishnav, React Developer, Full Stack Developer, Web Developer, Frontend Engineer, Portfolio, Python, FastAPI, JavaScript, Spring Boot">
     <meta name="author" content="{{ personal.name }}">
-    
+
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ personal.name }} | {{ personal.title }} ✦">
     <meta property="og:description" content="{{ personal.headline }}">
-    <meta property="og:image" content="/static/assets/avatar.svg">
+    <meta property="og:image" content="/static/assets/nikita-portrait.png">
     <meta property="og:url" content="https://github.com/NikitVaishnav">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ personal.name }} | {{ personal.title }}">
     <meta name="twitter:description" content="{{ personal.headline }}">
-    
+
     <!-- Google Fonts — Luxury Editorial Serif & Clean Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Italiana&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Italiana&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/static/css/style.css">
-    
+
     <!-- Favicon: Diamond Star -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
 </head>
+
 <body class="theme-light">
     <!-- Scroll Progress Indicator -->
     <div id="scroll-progress-bar" class="scroll-progress-bar" aria-hidden="true"></div>
@@ -52,8 +59,8 @@
                 <ul class="nav-menu">
                     <li><a href="#about" class="nav-link" data-section="about">ABOUT</a></li>
                     <li><a href="#stats" class="nav-link" data-section="stats">HIGHLIGHTS</a></li>
-                    <li><a href="#projects" class="nav-link" data-section="projects">PREVIOUS WORK</a></li>
-                    <li><a href="#skills" class="nav-link" data-section="skills">SERVICES &amp; STACK</a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects">PROJECTS</a></li>
+                    <li><a href="#skills" class="nav-link" data-section="skills">SKILLS</a></li>
                     <li><a href="#experience" class="nav-link" data-section="experience">EXPERIENCE</a></li>
                     <li><a href="#education" class="nav-link" data-section="education">EDUCATION</a></li>
                     <li><a href="#contact" class="nav-link" data-section="contact">CONTACT</a></li>
@@ -74,7 +81,8 @@
                 </a>
 
                 <!-- Mobile Hamburger Toggle -->
-                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open mobile menu" aria-expanded="false">
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open mobile menu"
+                    aria-expanded="false">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -96,7 +104,8 @@
                     <li><a href="#contact" class="mobile-nav-link"><span>08.</span> GET IN TOUCH ✦</a></li>
                 </ul>
                 <div class="mobile-nav-actions">
-                    <a href="{{ personal.resume_url }}" download="Nikita_Vaishnav_Resume.pdf" class="btn btn-dark btn-block">
+                    <a href="{{ personal.resume_url }}" download="Nikita_Vaishnav_Resume.pdf"
+                        class="btn btn-dark btn-block">
                         <i data-lucide="download"></i> DOWNLOAD RESUME ✦
                     </a>
                 </div>
@@ -159,7 +168,8 @@
                         <span class="brand-badge">NV</span>
                         <span class="brand-text">NIKITA<span class="text-accent">.DEV</span></span>
                     </a>
-                    <p class="footer-tagline">Full Stack Developer &amp; React Specialist building high-performance, user-centric web applications and robust architectures. ✦</p>
+                    <p class="footer-tagline">Full Stack Developer &amp; React Specialist building high-performance,
+                        user-centric web applications and robust architectures. ✦</p>
                     <div class="footer-status-pill">
                         <span class="status-indicator-dot"></span>
                         <span>{{ personal.status }}</span>
@@ -224,7 +234,7 @@
     <script>
         window.PORTFOLIO_DATA = {
             projects: {{ projects | tojson }},
-            personal: {{ personal | tojson }}
+        personal: { { personal | tojson } }
         };
     </script>
 
@@ -234,4 +244,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>

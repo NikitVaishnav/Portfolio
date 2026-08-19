@@ -307,6 +307,9 @@ button {
     display: flex;
     align-items: center;
     gap: 6px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
 }
 
 .desktop-nav .nav-link {
@@ -317,6 +320,7 @@ button {
     letter-spacing: 0.12em;
     color: var(--text-muted);
     text-transform: uppercase;
+    white-space: nowrap;
     transition: all var(--transition-fast);
 }
 

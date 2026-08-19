@@ -2,7 +2,7 @@
 
 A modern, high-performance, production-ready developer portfolio website built with **Python (FastAPI)**, **Jinja2 templating**, and a bespoke **modern CSS3 & Vanilla JavaScript** frontend.
 
-![Portfolio Preview Banner](static/assets/avatar.svg)
+![Portfolio Preview Banner](static/assets/nikita-portrait.png)
 
 ---
 
@@ -50,7 +50,7 @@ portfolio/
 │   ├── js/
 │   │   └── main.js             # Client interactivity (theme, filters, modal, AJAX, toasts)
 │   └── assets/
-│       ├── avatar.svg          # Stylized developer illustration
+│       ├── nikita-portrait.png # Developer portrait
 │       └── Nikita_Vaishnav_Resume.pdf # Downloadable resume document
 └── README.md                   # Documentation & deployment guide
 ```

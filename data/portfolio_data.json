@@ -26,7 +26,7 @@
       "detail": "Production UI & API Integration"
     },
     {
-      "value": "5+",
+      "value": "6+",
       "label": "Projects Built",
       "detail": "Full-Stack, Real-time & AI/ML"
     },
@@ -140,6 +140,19 @@
       "github_url": "https://github.com/NikitVaishnav",
       "demo_url": "",
       "metrics": ["Item Matching System", "Secure Auth", "Relational Database"]
+    },
+    {
+      "id": "hopnrun-game",
+      "title": "HopNRun Game",
+      "category": "game",
+      "badge": "Java Desktop Game",
+      "featured": false,
+      "summary": "Desktop arcade game built with Java and JavaFX, featuring responsive player movement, collision detection, and live scoring.",
+      "description": "Built a JavaFX desktop game with algorithmic collision detection, real-time score tracking, and performance-tuned player movement for smooth, responsive gameplay.",
+      "tech_stack": ["Java", "JavaFX", "Collision Detection", "Game Logic", "Performance Optimization"],
+      "github_url": "https://github.com/aadityabhoyarr/HopNRun_JavaGame",
+      "demo_url": "",
+      "metrics": ["Collision Detection", "Live Score Tracking", "Smooth Player Movement"]
     }
   ],
   "skills": {
