@@ -1,0 +1,76 @@
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+            <span class="section-badge"><i data-lucide="folder-git-2"></i> Showcase</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-subtitle">A curated selection of full-stack web applications, real-time messaging tools, and machine learning systems.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="projects-filter-bar" role="group" aria-label="Filter Projects">
+            <button class="project-filter-btn active" data-filter="all">All Projects ({{ projects | length }})</button>
+            <button class="project-filter-btn" data-filter="fullstack">Full Stack</button>
+            <button class="project-filter-btn" data-filter="realtime">Real-Time WebSockets</button>
+            <button class="project-filter-btn" data-filter="aiml">AI &amp; Machine Learning</button>
+            <button class="project-filter-btn" data-filter="dashboard">Dashboards &amp; Analytics</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+            {% for project in projects %}
+            <article class="project-card card glass-card" data-category="{{ project.category }}" data-project-id="{{ project.id }}">
+                <!-- Card Top Bar -->
+                <div class="project-card-header">
+                    <div class="project-category-badge">
+                        <span class="category-indicator-dot"></span>
+                        <span>{{ project.badge }}</span>
+                    </div>
+                    <div class="project-card-links">
+                        <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source on GitHub" aria-label="GitHub Repository">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <button class="project-link-icon btn-open-modal" data-project-id="{{ project.id }}" title="View Project Details" aria-label="Open Project Details">
+                            <i data-lucide="maximize-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Title & Summary -->
+                <div class="project-card-body">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-summary">{{ project.summary }}</p>
+
+                    <!-- Key Metrics / Engineering Highlights -->
+                    <div class="project-metrics-wrap">
+                        {% for metric in project.metrics %}
+                        <div class="metric-pill">
+                            <i data-lucide="check" class="metric-icon"></i>
+                            <span>{{ metric }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Tech Stack Badges Footer -->
+                <div class="project-card-footer">
+                    <div class="project-tech-tags">
+                        {% for tech in project.tech_stack %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="project-action-row">
+                        <button class="btn btn-sm btn-outline btn-open-modal" data-project-id="{{ project.id }}">
+                            <i data-lucide="file-text"></i> Architecture &amp; Info
+                        </button>
+                        <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+                            <i data-lucide="github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

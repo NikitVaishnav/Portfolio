@@ -1,0 +1,94 @@
+<section id="about" class="section about-section">
+    <div class="container">
+        <!-- Section Title Header -->
+        <div class="section-header text-center">
+            <span class="section-badge"><i data-lucide="user"></i> Background</span>
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <p class="section-subtitle">A quick introduction to my engineering background, core philosophies, and educational journey.</p>
+        </div>
+
+        <div class="about-grid">
+            <!-- Left Bio Column -->
+            <div class="about-text-column">
+                <div class="card glass-card about-card">
+                    <h3 class="about-card-title">
+                        <i data-lucide="sparkles" class="text-accent"></i>
+                        Frontend-Focused Full Stack Developer
+                    </h3>
+                    <p class="about-bio-text">
+                        {{ personal.bio }}
+                    </p>
+
+                    <div class="about-highlights-wrapper">
+                        <h4 class="highlights-heading">Key Strengths &amp; Focus Areas:</h4>
+                        <ul class="highlights-list">
+                            {% for highlight in personal.highlights %}
+                            <li class="highlight-item">
+                                <span class="highlight-icon"><i data-lucide="check-circle-2"></i></span>
+                                <span class="highlight-text">{{ highlight }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <!-- Direct Info Strip -->
+                    <div class="about-info-grid">
+                        <div class="info-pill">
+                            <span class="info-label">Location:</span>
+                            <span class="info-val"><i data-lucide="map-pin"></i> {{ personal.location }}</span>
+                        </div>
+                        <div class="info-pill">
+                            <span class="info-label">Current Role:</span>
+                            <span class="info-val"><i data-lucide="briefcase"></i> Full Stack Web Developer @ Appzmine Tech</span>
+                        </div>
+                        <div class="info-pill">
+                            <span class="info-label">Education:</span>
+                            <span class="info-val"><i data-lucide="graduation-cap"></i> MCA @ Ramdeobaba University (RCOEM)</span>
+                        </div>
+                        <div class="info-pill">
+                            <span class="info-label">Primary Stack:</span>
+                            <span class="info-val"><i data-lucide="layers"></i> React.js, JavaScript, Spring Boot, MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Stats Column -->
+            <div class="about-stats-column">
+                <div class="stats-grid">
+                    {% for stat in stats %}
+                    <div class="card glass-card stat-card">
+                        <div class="stat-card-icon-wrap">
+                            {% if loop.index == 1 %}
+                                <i data-lucide="briefcase" class="stat-icon icon-cyan"></i>
+                            {% elif loop.index == 2 %}
+                                <i data-lucide="folder-git-2" class="stat-icon icon-violet"></i>
+                            {% elif loop.index == 3 %}
+                                <i data-lucide="cpu" class="stat-icon icon-emerald"></i>
+                            {% else %}
+                                <i data-lucide="award" class="stat-icon icon-amber"></i>
+                            {% endif %}
+                        </div>
+                        <div class="stat-card-content">
+                            <span class="stat-big-number gradient-text">{{ stat.value }}</span>
+                            <h4 class="stat-card-title">{{ stat.label }}</h4>
+                            <p class="stat-card-desc">{{ stat.detail }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Philosophy Box -->
+                <div class="card glass-card philosophy-card">
+                    <div class="philosophy-header">
+                        <i data-lucide="compass" class="text-accent"></i>
+                        <h4>Development Philosophy</h4>
+                    </div>
+                    <p class="philosophy-quote">
+                        "Great software is built at the intersection of clean, maintainable component architecture, thoughtful user experience, and robust API design."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

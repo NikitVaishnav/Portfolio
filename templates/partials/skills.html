@@ -1,0 +1,104 @@
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+            <span class="section-badge"><i data-lucide="cpu"></i> Capabilities</span>
+            <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+            <p class="section-subtitle">A comprehensive breakdown of my technical proficiencies, development frameworks, and core engineering concepts.</p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="skills-filter-tabs" role="tablist" aria-label="Skill Categories">
+            <button class="skill-tab-btn active" data-category="all" role="tab" aria-selected="true">
+                <i data-lucide="grid"></i> All Skills
+            </button>
+            {% for cat in skills.categories %}
+            <button class="skill-tab-btn" data-category="{{ cat.id }}" role="tab" aria-selected="false">
+                {% if cat.id == 'frontend' %}
+                    <i data-lucide="layout"></i> Frontend
+                {% elif cat.id == 'backend' %}
+                    <i data-lucide="server"></i> Backend &amp; APIs
+                {% elif cat.id == 'databases' %}
+                    <i data-lucide="database"></i> Databases
+                {% elif cat.id == 'tools' %}
+                    <i data-lucide="tool"></i> Tools
+                {% else %}
+                    <i data-lucide="cpu"></i> Concepts
+                {% endif %}
+                <span>{{ cat.name }}</span>
+            </button>
+            {% endfor %}
+        </div>
+
+        <!-- Skills Category Grid -->
+        <div class="skills-categories-grid">
+            {% for cat in skills.categories %}
+            <div class="skill-category-card card glass-card" data-category-group="{{ cat.id }}">
+                <div class="category-header">
+                    <div class="category-icon-wrapper">
+                        {% if cat.id == 'frontend' %}
+                            <i data-lucide="layout" class="cat-icon icon-cyan"></i>
+                        {% elif cat.id == 'backend' %}
+                            <i data-lucide="server" class="cat-icon icon-violet"></i>
+                        {% elif cat.id == 'databases' %}
+                            <i data-lucide="database" class="cat-icon icon-emerald"></i>
+                        {% elif cat.id == 'tools' %}
+                            <i data-lucide="tool" class="cat-icon icon-amber"></i>
+                        {% else %}
+                            <i data-lucide="cpu" class="cat-icon icon-pink"></i>
+                        {% endif %}
+                    </div>
+                    <div class="category-title-wrap">
+                        <h3 class="category-name">{{ cat.name }}</h3>
+                        <p class="category-description">{{ cat.description }}</p>
+                    </div>
+                </div>
+
+                <!-- Skill Items Grid -->
+                <div class="skills-items-container">
+                    {% for skill in cat.skills %}
+                    <div class="skill-item-card {% if skill.highlight %}skill-highlighted{% endif %}">
+                        <div class="skill-item-top">
+                            <span class="skill-name">
+                                {% if skill.highlight %}
+                                <span class="highlight-star">★</span>
+                                {% endif %}
+                                {{ skill.name }}
+                            </span>
+                            <span class="skill-badge-level badge-{{ skill.level | lower }}">{{ skill.level }}</span>
+                        </div>
+                        
+                        <!-- Progress Bar Visual Indicator -->
+                        <div class="skill-progress-track" title="{{ skill.proficiency }}% proficiency">
+                            <div class="skill-progress-bar" style="width: {{ skill.proficiency }}%;" data-level="{{ skill.proficiency }}"></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Continuous Learning Strip -->
+        <div class="card glass-card learning-strip-card">
+            <div class="learning-header">
+                <div class="learning-icon">
+                    <i data-lucide="trending-up" class="text-accent"></i>
+                </div>
+                <div class="learning-info">
+                    <h4 class="learning-title">Continuous Growth &amp; Current Focus</h4>
+                    <p class="learning-desc">Technologies and advanced concepts I am actively mastering:</p>
+                </div>
+            </div>
+            <div class="learning-pills-row">
+                {% for item in currently_learning %}
+                <div class="learning-pill">
+                    <span class="pulse-dot"></span>
+                    <span class="pill-title">{{ item.name }}</span>
+                    <span class="pill-category">{{ item.category }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

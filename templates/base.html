@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO & Metadata -->
+    <title>{{ personal.name }} | {{ personal.title }}</title>
+    <meta name="description" content="{{ personal.name }} — {{ personal.headline }} Experienced in React.js, Full Stack Development, REST APIs, and modern web architectures.">
+    <meta name="keywords" content="Nikita Vaishnav, React Developer, Full Stack Developer, Web Developer, Frontend Engineer, Portfolio, Python, FastAPI, JavaScript, Spring Boot">
+    <meta name="author" content="{{ personal.name }}">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ personal.name }} | {{ personal.title }}">
+    <meta property="og:description" content="{{ personal.headline }}">
+    <meta property="og:image" content="/static/assets/avatar.svg">
+    <meta property="og:url" content="https://github.com/NikitVaishnav">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ personal.name }} | {{ personal.title }}">
+    <meta name="twitter:description" content="{{ personal.headline }}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body class="theme-dark">
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress-bar" class="scroll-progress-bar" aria-hidden="true"></div>
+
+    <!-- Ambient Mesh Glow Background -->
+    <div class="ambient-glow" aria-hidden="true">
+        <div class="glow-orb orb-primary"></div>
+        <div class="glow-orb orb-secondary"></div>
+        <div class="glow-orb orb-accent"></div>
+    </div>
+
+    <!-- Site Header & Navigation -->
+    <header class="site-header" id="site-header">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-brand" aria-label="Nikita Vaishnav Home">
+                <span class="brand-badge">NV</span>
+                <span class="brand-text">Nikita<span class="text-accent">.dev</span></span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                    <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                    <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                    <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
+                    <i data-lucide="sun" class="theme-icon light-icon"></i>
+                    <i data-lucide="moon" class="theme-icon dark-icon"></i>
+                </button>
+
+                <!-- Resume Download CTA -->
+                <a href="#contact" class="btn btn-outline btn-sm nav-cta-resume">
+                    <span>Let's Talk</span>
+                </a>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open mobile menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-hidden="true">
+            <div class="mobile-nav-content">
+                <ul class="mobile-nav-menu">
+                    <li><a href="#hero" class="mobile-nav-link"><span>01.</span> Home</a></li>
+                    <li><a href="#about" class="mobile-nav-link"><span>02.</span> About</a></li>
+                    <li><a href="#skills" class="mobile-nav-link"><span>03.</span> Skills</a></li>
+                    <li><a href="#experience" class="mobile-nav-link"><span>04.</span> Experience</a></li>
+                    <li><a href="#projects" class="mobile-nav-link"><span>05.</span> Projects</a></li>
+                    <li><a href="#education" class="mobile-nav-link"><span>06.</span> Education & Certs</a></li>
+                    <li><a href="#contact" class="mobile-nav-link"><span>07.</span> Contact</a></li>
+                </ul>
+                <div class="mobile-nav-actions">
+                    <a href="{{ personal.resume_url }}" download="Nikita_Vaishnav_Resume.pdf" class="btn btn-primary btn-block">
+                        <i data-lucide="download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Project Quick View Modal -->
+    <div id="project-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-badge-wrapper">
+                    <span id="modal-project-badge" class="badge badge-accent">Featured Project</span>
+                </div>
+                <h3 id="modal-project-title" class="modal-title">Project Title</h3>
+                <p id="modal-project-summary" class="modal-summary">Brief project overview.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h4 class="modal-subtitle"><i data-lucide="info"></i> Project Architecture & Details</h4>
+                    <p id="modal-project-desc" class="modal-desc-text">Detailed description.</p>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-subtitle"><i data-lucide="zap"></i> Key Engineering Highlights</h4>
+                    <ul id="modal-project-metrics" class="modal-metrics-list"></ul>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-subtitle"><i data-lucide="layers"></i> Technologies & Stack</h4>
+                    <div id="modal-project-stack" class="modal-tags-container"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i data-lucide="github"></i> View GitHub Repo
+                </a>
+                <a id="modal-contact-link" href="#contact" class="btn btn-primary modal-action-btn">
+                    <i data-lucide="message-square"></i> Discuss Project
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-brand">
+                        <span class="brand-badge">NV</span>
+                        <span class="brand-text">Nikita<span class="text-accent">.dev</span></span>
+                    </a>
+                    <p class="footer-tagline">Building modern, responsive frontend interfaces & robust full-stack applications with clean code principles.</p>
+                    <div class="footer-status-pill">
+                        <span class="status-indicator-dot"></span>
+                        <span>{{ personal.status }}</span>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#skills">Technical Skills</a></li>
+                        <li><a href="#experience">Experience Timeline</a></li>
+                        <li><a href="#projects">Featured Projects</a></li>
+                        <li><a href="#education">Education & Credentials</a></li>
+                        <li><a href="#contact">Get In Touch</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-social-list">
+                        <li>
+                            <a href="{{ personal.linkedin }}" target="_blank" rel="noopener noreferrer">
+                                <i data-lucide="linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ personal.github }}" target="_blank" rel="noopener noreferrer">
+                                <i data-lucide="github"></i> GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:{{ personal.email }}">
+                                <i data-lucide="mail"></i> {{ personal.email }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:{{ personal.phone }}">
+                                <i data-lucide="phone"></i> {{ personal.phone }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; <span id="current-year">2026</span> {{ personal.name }}. All rights reserved.
+                </p>
+                <div class="footer-meta">
+                    <span class="badge-tag">Built with Python &amp; FastAPI</span>
+                    <a href="#hero" class="back-to-top" aria-label="Back to top" title="Back to top">
+                        <span>Top</span> <i data-lucide="arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pass backend data safely to client JS for interactive modals/filters -->
+    <script>
+        window.PORTFOLIO_DATA = {
+            projects: {{ projects | tojson }},
+            personal: {{ personal | tojson }}
+        };
+    </script>
+
+    <!-- Main JavaScript Bundle -->
+    <script src="/static/js/main.js"></script>
+    <script>
+        // Initialize Lucide icons on initial load
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<section id="experience" class="section experience-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+            <span class="section-badge"><i data-lucide="briefcase"></i> Career</span>
+            <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+            <p class="section-subtitle">Hands-on experience delivering user-facing features, API integrations, and maintainable frontend solutions.</p>
+        </div>
+
+        <!-- Experience Timeline -->
+        <div class="experience-timeline">
+            {% for exp in experience %}
+            <div class="timeline-item">
+                <!-- Timeline Marker & Node -->
+                <div class="timeline-marker">
+                    <div class="marker-dot {% if exp.is_current %}marker-current{% endif %}">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <div class="timeline-line"></div>
+                </div>
+
+                <!-- Timeline Content Card -->
+                <div class="timeline-card card glass-card">
+                    <div class="timeline-header">
+                        <div class="role-company-group">
+                            <h3 class="experience-role">{{ exp.role }}</h3>
+                            <div class="company-row">
+                                <span class="company-name text-accent"><i data-lucide="building-2"></i> {{ exp.company }}</span>
+                                <span class="location-badge"><i data-lucide="map-pin"></i> {{ exp.location }}</span>
+                                {% if exp.is_current %}
+                                <span class="badge badge-success">Current Role</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="period-badge">
+                            <i data-lucide="calendar"></i>
+                            <span>{{ exp.period }}</span>
+                        </div>
+                    </div>
+
+                    <!-- Role Overview -->
+                    <p class="experience-overview">{{ exp.description }}</p>
+
+                    <!-- Achievements List -->
+                    <div class="achievements-container">
+                        <h4 class="achievements-title"><i data-lucide="check-square"></i> Key Responsibilities &amp; Impact:</h4>
+                        <div class="achievements-grid">
+                            {% for ach in exp.achievements %}
+                            <div class="achievement-card">
+                                <div class="achievement-header">
+                                    <span class="bullet-dot"></span>
+                                    <strong class="achievement-title-text">{{ ach.title }}</strong>
+                                </div>
+                                <p class="achievement-detail">{{ ach.detail }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Technologies Used Footer -->
+                    <div class="experience-tech-footer">
+                        <span class="tech-label">Core Technologies:</span>
+                        <div class="tech-tags-list">
+                            {% for tech in exp.tech_stack %}
+                            <span class="tech-badge">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

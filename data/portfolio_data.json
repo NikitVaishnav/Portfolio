@@ -1,0 +1,290 @@
+{
+  "personal": {
+    "name": "Nikita Vaishnav",
+    "title": "Full Stack Web Developer & React Specialist",
+    "headline": "Crafting responsive, high-performance web applications with React.js & modern architectures.",
+    "tagline": "Passionate about building scalable frontend systems, reusable UI components, and seamless user experiences.",
+    "email": "nikitavaishnav1703@gmail.com",
+    "phone": "+91-7666987956",
+    "location": "Nagpur, India",
+    "status": "Available for Opportunities",
+    "linkedin": "https://www.linkedin.com/in/nikita-vaishnav-91586a344/",
+    "github": "https://github.com/NikitVaishnav",
+    "resume_url": "/static/assets/Nikita_Vaishnav_Resume.pdf",
+    "bio": "Frontend-focused developer with hands-on experience building responsive web applications using React.js, JavaScript, HTML, CSS, and Bootstrap. Experienced in integrating REST APIs, developing reusable UI components, debugging application issues, and working with Git/GitHub in collaborative development environments. Strong foundation in frontend fundamentals with a focus on writing clean, maintainable code and continuously learning modern React practices.",
+    "highlights": [
+      "Specialized in React.js component architecture, state management & REST API integrations.",
+      "Track record of translating complex requirements into responsive, accessible web interfaces.",
+      "Pursuing Master of Computer Applications (MCA) at Ramdeobaba University (RCOEM).",
+      "Hands-on with modern full-stack workflows including Spring Boot, Node.js, and Cloud Fundamentals."
+    ]
+  },
+  "stats": [
+    {
+      "value": "1+",
+      "label": "Years Experience",
+      "detail": "Production UI & API Integration"
+    },
+    {
+      "value": "5+",
+      "label": "Projects Built",
+      "detail": "Full-Stack, Real-time & AI/ML"
+    },
+    {
+      "value": "15+",
+      "label": "Tech Stack Skills",
+      "detail": "React, JS, Spring Boot, MySQL"
+    },
+    {
+      "value": "MCA",
+      "label": "Master's Degree",
+      "detail": "Ramdeobaba University (2025–Present)"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Appzmine Tech",
+      "role": "Full Stack Web Developer",
+      "location": "Remote",
+      "period": "Apr 2025 – Present",
+      "is_current": true,
+      "type": "Full-time / Remote",
+      "description": "Driving frontend development and API integrations across responsive web applications, collaborating with cross-functional teams to build reliable, high-performance digital products.",
+      "achievements": [
+        {
+          "title": "Frontend Development",
+          "detail": "Developed and maintained responsive user-facing features using React.js, JavaScript, HTML, CSS, and Bootstrap, focusing on reusable components and consistent UI implementation."
+        },
+        {
+          "title": "REST API Integration",
+          "detail": "Integrated REST APIs with React applications using Axios, handling API requests, responses, authentication flows, and frontend data rendering."
+        },
+        {
+          "title": "Debugging & Optimization",
+          "detail": "Debugged frontend issues, fixed functional and UI bugs, and refactored components to improve code readability, maintainability, and application performance."
+        },
+        {
+          "title": "Responsive Interfaces",
+          "detail": "Converted functional requirements into responsive web interfaces compatible with different screen sizes while maintaining usability and consistent user experience."
+        },
+        {
+          "title": "Collaboration & Version Control",
+          "detail": "Worked with backend developers and other team members to implement features, troubleshoot issues, and deliver changes using Git/GitHub and modern development workflows."
+        }
+      ],
+      "tech_stack": ["React.js", "JavaScript", "HTML5", "CSS3", "Bootstrap", "Axios", "REST APIs", "Git", "GitHub"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "flight-booking-system",
+      "title": "Flight Booking System",
+      "category": "fullstack",
+      "badge": "Full Stack Application",
+      "featured": true,
+      "summary": "Full-stack airline reservation and booking platform with secure authentication, seat selection, and automated booking pipelines.",
+      "description": "Built a full-stack flight booking application with a responsive React frontend and Spring Boot backend. Developed user-facing screens, integrated REST APIs, implemented JWT-based authentication, and connected frontend workflows with MySQL-backed services.",
+      "tech_stack": ["React", "Spring Boot", "MySQL", "JWT Auth", "REST APIs", "Axios"],
+      "github_url": "https://github.com/NikitVaishnav",
+      "demo_url": "",
+      "metrics": ["JWT Authentication", "Relational MySQL Schema", "Responsive Booking Flow"]
+    },
+    {
+      "id": "chatapp",
+      "title": "ChatApp — Real-Time Messenger",
+      "category": "realtime",
+      "badge": "Real-Time WebSocket",
+      "featured": true,
+      "summary": "Real-time chat application with instant WebSocket communication, multi-room chat, and dynamic UI state handling.",
+      "description": "Developed a responsive real-time chat application using React.js and Node.js with Socket.IO. Created reusable frontend components, implemented real-time messaging, and integrated backend services for chatroom communication.",
+      "tech_stack": ["React.js", "Node.js", "Socket.IO", "Express.js", "CSS3", "WebSockets"],
+      "github_url": "https://github.com/NikitVaishnav",
+      "demo_url": "",
+      "metrics": ["Sub-second Latency", "Bi-directional WebSockets", "Component Architecture"]
+    },
+    {
+      "id": "ai-in-healthcare",
+      "title": "AI in Healthcare — Disease Predictor",
+      "category": "aiml",
+      "badge": "Machine Learning",
+      "featured": true,
+      "summary": "Machine learning system predicting potential medical conditions based on structured patient symptom input datasets.",
+      "description": "Developed a machine learning-based healthcare application that predicts possible diseases based on patient symptoms. Performed data preprocessing, trained and evaluated classification models, and built a system to provide disease predictions from symptom inputs.",
+      "tech_stack": ["Python", "Machine Learning", "Scikit-Learn", "Pandas", "NumPy", "Data Preprocessing"],
+      "github_url": "https://github.com/NikitVaishnav",
+      "demo_url": "",
+      "metrics": ["Symptom Classification", "Data Normalization", "Predictive Diagnostics"]
+    },
+    {
+      "id": "student-risk-dashboard",
+      "title": "Student Risk Assessment Dashboard",
+      "category": "dashboard",
+      "badge": "Analytics & UI/UX",
+      "featured": true,
+      "summary": "Interactive analytics dashboard for educational institutions to monitor and prevent student dropout risks.",
+      "description": "Developed a responsive dashboard interface for a student dropout prediction system using React. Implemented data upload workflows, configuration screens, student information cards, and visualizations for presenting prediction results.",
+      "tech_stack": ["React.js", "Data Visualization", "UI/UX", "JavaScript", "Bootstrap", "Component Design"],
+      "github_url": "https://github.com/NikitVaishnav",
+      "demo_url": "",
+      "metrics": ["Visual Risk Cards", "Batch Data Upload", "Dynamic Filtering"]
+    },
+    {
+      "id": "lost-found-portal",
+      "title": "Lost & Found Community Portal",
+      "category": "fullstack",
+      "badge": "Enterprise Java",
+      "featured": false,
+      "summary": "Community portal enabling users to report, search, and claim lost or found items with secure user authentication.",
+      "description": "Developed a web-based portal using Java, JSP, Servlets, and MySQL with authentication and item-listing functionality. Debugged application issues and improved code organization for maintainability.",
+      "tech_stack": ["Java", "JSP", "Servlets", "MySQL", "HTML5", "CSS3"],
+      "github_url": "https://github.com/NikitVaishnav",
+      "demo_url": "",
+      "metrics": ["Item Matching System", "Secure Auth", "Relational Database"]
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "id": "frontend",
+        "name": "Frontend Engineering",
+        "icon": "layout",
+        "description": "Building modern, component-driven, responsive user interfaces",
+        "skills": [
+          { "name": "React.js", "level": "Advanced", "highlight": true, "proficiency": 92 },
+          { "name": "JavaScript (ES6+)", "level": "Advanced", "highlight": true, "proficiency": 90 },
+          { "name": "HTML5 & Semantic Markup", "level": "Advanced", "highlight": false, "proficiency": 95 },
+          { "name": "CSS3 & Modern Layouts", "level": "Advanced", "highlight": false, "proficiency": 92 },
+          { "name": "Bootstrap", "level": "Proficient", "highlight": false, "proficiency": 88 },
+          { "name": "Redux", "level": "Proficient", "highlight": false, "proficiency": 82 },
+          { "name": "Responsive Design", "level": "Advanced", "highlight": true, "proficiency": 94 }
+        ]
+      },
+      {
+        "id": "backend",
+        "name": "API & Backend",
+        "icon": "server",
+        "description": "Designing RESTful services, middleware, and backend integrations",
+        "skills": [
+          { "name": "REST APIs", "level": "Advanced", "highlight": true, "proficiency": 90 },
+          { "name": "Axios", "level": "Advanced", "highlight": true, "proficiency": 92 },
+          { "name": "Node.js", "level": "Proficient", "highlight": true, "proficiency": 80 },
+          { "name": "Express.js", "level": "Proficient", "highlight": false, "proficiency": 78 },
+          { "name": "Spring Boot", "level": "Proficient", "highlight": true, "proficiency": 76 },
+          { "name": "Java", "level": "Proficient", "highlight": false, "proficiency": 80 },
+          { "name": "Python", "level": "Proficient", "highlight": false, "proficiency": 82 }
+        ]
+      },
+      {
+        "id": "databases",
+        "name": "Databases & Storage",
+        "icon": "database",
+        "description": "Relational & document database modeling and queries",
+        "skills": [
+          { "name": "MongoDB", "level": "Proficient", "highlight": true, "proficiency": 82 },
+          { "name": "MySQL", "level": "Proficient", "highlight": true, "proficiency": 85 },
+          { "name": "SQL Query Optimization", "level": "Proficient", "highlight": false, "proficiency": 80 }
+        ]
+      },
+      {
+        "id": "tools",
+        "name": "Tools & Workflow",
+        "icon": "tool",
+        "description": "Development tooling, version control, and containerization",
+        "skills": [
+          { "name": "Git & GitHub", "level": "Advanced", "highlight": true, "proficiency": 92 },
+          { "name": "Postman", "level": "Advanced", "highlight": true, "proficiency": 90 },
+          { "name": "Docker", "level": "Proficient", "highlight": false, "proficiency": 75 },
+          { "name": "npm & Vite", "level": "Advanced", "highlight": false, "proficiency": 88 }
+        ]
+      },
+      {
+        "id": "concepts",
+        "name": "Core Concepts",
+        "icon": "cpu",
+        "description": "Software engineering fundamentals and best practices",
+        "skills": [
+          { "name": "Component-Based Development", "level": "Advanced", "highlight": true, "proficiency": 95 },
+          { "name": "JWT Authentication", "level": "Proficient", "highlight": true, "proficiency": 85 },
+          { "name": "Debugging & Troubleshooting", "level": "Advanced", "highlight": true, "proficiency": 92 },
+          { "name": "API Integration & Handling", "level": "Advanced", "highlight": false, "proficiency": 92 },
+          { "name": "Performance Optimization", "level": "Proficient", "highlight": false, "proficiency": 85 },
+          { "name": "Data Structures & Algorithms", "level": "Proficient", "highlight": false, "proficiency": 80 }
+        ]
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Ramdeobaba University (RCOEM)",
+      "degree": "Master of Computer Applications (MCA)",
+      "status": "Pursuing",
+      "period": "2025 – Present",
+      "location": "Nagpur, India",
+      "badge": "Current Master's Program",
+      "description": "Deepening knowledge in advanced computer science, software engineering architectures, algorithms, and full-stack enterprise systems."
+    },
+    {
+      "institution": "RTMNU University",
+      "degree": "Bachelor of Computer Applications (BCA)",
+      "status": "Graduated",
+      "period": "Graduated 2024",
+      "location": "Nagpur, India",
+      "badge": "Undergraduate Degree",
+      "description": "Built solid foundations in software development, database management systems, object-oriented programming, and web technologies."
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Google Cloud Fundamentals",
+      "issuer": "Google Cloud",
+      "icon": "cloud",
+      "tag": "Cloud Architecture",
+      "color": "cyan"
+    },
+    {
+      "title": "AWS Academy Cloud Foundations",
+      "issuer": "Amazon Web Services (AWS)",
+      "icon": "cloud-lightning",
+      "tag": "Cloud Services",
+      "color": "amber"
+    },
+    {
+      "title": "Full Stack Web Development using MERN Stack",
+      "issuer": "Specialized Training",
+      "icon": "layers",
+      "tag": "Full Stack",
+      "color": "violet"
+    }
+  ],
+  "currently_learning": [
+    { "name": "TypeScript", "category": "Language", "status": "In Progress" },
+    { "name": "Advanced React Patterns", "category": "Frontend", "status": "In Progress" },
+    { "name": "Data Structures & Algorithms", "category": "Computer Science", "status": "Active Practice" }
+  ],
+  "social_links": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/nikita-vaishnav-91586a344/",
+      "icon": "linkedin",
+      "handle": "nikita-vaishnav"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/NikitVaishnav",
+      "icon": "github",
+      "handle": "NikitVaishnav"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:nikitavaishnav1703@gmail.com",
+      "icon": "mail",
+      "handle": "nikitavaishnav1703@gmail.com"
+    },
+    {
+      "name": "Phone",
+      "url": "tel:+917666987956",
+      "icon": "phone",
+      "handle": "+91-7666987956"
+    }
+  ]
+}

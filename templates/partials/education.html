@@ -1,0 +1,82 @@
+<section id="education" class="section education-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+            <span class="section-badge"><i data-lucide="graduation-cap"></i> Academics</span>
+            <h2 class="section-title">Education &amp; <span class="gradient-text">Certifications</span></h2>
+            <p class="section-subtitle">Formal computer science education, cloud certifications, and continuous technical upskilling.</p>
+        </div>
+
+        <div class="education-grid">
+            <!-- Left: Degree Programs -->
+            <div class="education-degrees-column">
+                <div class="column-header">
+                    <i data-lucide="book-open" class="text-accent"></i>
+                    <h3 class="column-title">Academic Qualifications</h3>
+                </div>
+
+                <div class="degrees-list">
+                    {% for edu in education %}
+                    <div class="card glass-card degree-card">
+                        <div class="degree-card-top">
+                            <div class="degree-icon-wrap">
+                                <i data-lucide="graduation-cap"></i>
+                            </div>
+                            <div class="degree-titles">
+                                <span class="degree-badge">{{ edu.badge }}</span>
+                                <h4 class="degree-name">{{ edu.degree }}</h4>
+                                <h5 class="institution-name text-accent">{{ edu.institution }}</h5>
+                            </div>
+                            <div class="degree-meta">
+                                <span class="period-pill"><i data-lucide="calendar"></i> {{ edu.period }}</span>
+                                <span class="location-pill"><i data-lucide="map-pin"></i> {{ edu.location }}</span>
+                            </div>
+                        </div>
+                        <p class="degree-desc">{{ edu.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Right: Certifications & Continuous Learning -->
+            <div class="certifications-column">
+                <div class="column-header">
+                    <i data-lucide="award" class="text-accent"></i>
+                    <h3 class="column-title">Certifications &amp; Credentials</h3>
+                </div>
+
+                <div class="certs-list">
+                    {% for cert in certifications %}
+                    <div class="card glass-card cert-card cert-{{ cert.color }}">
+                        <div class="cert-icon-wrapper">
+                            {% if cert.icon == 'cloud' %}
+                                <i data-lucide="cloud"></i>
+                            {% elif cert.icon == 'cloud-lightning' %}
+                                <i data-lucide="cloud-lightning"></i>
+                            {% else %}
+                                <i data-lucide="layers"></i>
+                            {% endif %}
+                        </div>
+                        <div class="cert-details">
+                            <span class="cert-tag">{{ cert.tag }}</span>
+                            <h4 class="cert-title">{{ cert.title }}</h4>
+                            <span class="cert-issuer">Issued by: <strong>{{ cert.issuer }}</strong></span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Learning Focus Card -->
+                <div class="card glass-card active-learning-card">
+                    <h4 class="active-learning-heading">
+                        <i data-lucide="sparkles" class="text-accent"></i>
+                        Active Skill Roadmap
+                    </h4>
+                    <p class="active-learning-text">
+                        Deepening algorithmic problem-solving with Data Structures &amp; Algorithms, mastering TypeScript for type-safe applications, and exploring advanced React design patterns.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

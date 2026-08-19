@@ -1,0 +1,128 @@
+<section id="hero" class="hero-section">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <!-- Availability Badge -->
+            <div class="hero-badge animate-fade-in">
+                <span class="status-indicator-dot"></span>
+                <span class="badge-text">{{ personal.status }}</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="hero-title animate-fade-in delay-1">
+                Hi, I'm <span class="gradient-text">{{ personal.name }}</span>
+            </h1>
+
+            <!-- Animated Dynamic Role Subheading -->
+            <div class="hero-roles animate-fade-in delay-2" aria-label="Professional roles">
+                <span class="role-prefix">I am a </span>
+                <span id="typewriter-role" class="dynamic-role text-accent">React Frontend Developer</span>
+                <span class="cursor-blink">|</span>
+            </div>
+
+            <!-- Bio / Tagline -->
+            <p class="hero-description animate-fade-in delay-3">
+                {{ personal.headline }} {{ personal.tagline }}
+            </p>
+
+            <!-- Action Buttons CTA -->
+            <div class="hero-actions animate-fade-in delay-4">
+                <a href="#projects" class="btn btn-primary btn-lg">
+                    <span>View Projects</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="{{ personal.resume_url }}" download="Nikita_Vaishnav_Resume.pdf" class="btn btn-secondary btn-lg" id="resume-download-btn">
+                    <i data-lucide="file-text"></i>
+                    <span>Download Resume</span>
+                </a>
+                <a href="#contact" class="btn btn-outline btn-lg">
+                    <i data-lucide="mail"></i>
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+
+            <!-- Social Links Strip -->
+            <div class="hero-social-strip animate-fade-in delay-5">
+                <span class="social-strip-label">Find me on:</span>
+                <div class="social-icons-group">
+                    <a href="{{ personal.github }}" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="GitHub Profile">
+                        <i data-lucide="github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="{{ personal.linkedin }}" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="LinkedIn Profile">
+                        <i data-lucide="linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:{{ personal.email }}" class="social-pill-link" aria-label="Send Email">
+                        <i data-lucide="mail"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Visual Display Card -->
+        <div class="hero-visual animate-fade-in delay-2">
+            <div class="hero-card-wrapper">
+                <!-- Glowing Aura Layer -->
+                <div class="hero-card-glow"></div>
+                
+                <div class="hero-glass-card">
+                    <!-- Top Code Window Controls -->
+                    <div class="code-window-header">
+                        <div class="window-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="window-tab">
+                            <i data-lucide="code-2"></i>
+                            <span>DeveloperProfile.jsx</span>
+                        </div>
+                    </div>
+
+                    <!-- Code Snippet Body -->
+                    <div class="code-window-body">
+                        <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Nikita Vaishnav"</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"Full Stack Web Developer"</span>,
+  <span class="code-prop">education</span>: <span class="code-string">"MCA @ RCOEM (Pursuing)"</span>,
+  <span class="code-prop">coreStack</span>: [
+    <span class="code-string">"React.js"</span>, <span class="code-string">"JavaScript (ES6+)"</span>,
+    <span class="code-string">"Spring Boot"</span>, <span class="code-string">"REST APIs"</span>,
+    <span class="code-string">"Node.js"</span>, <span class="code-string">"MySQL"</span>, <span class="code-string">"MongoDB"</span>
+  ],
+  <span class="code-prop">mindset</span>: <span class="code-string">"Clean Code &amp; Great UI"</span>,
+  <span class="code-prop">openToWork</span>: <span class="code-bool">true</span>
+};</code></pre>
+                    </div>
+
+                    <!-- Floating Tech Pills on Card -->
+                    <div class="floating-pills-row">
+                        <span class="tech-pill pill-react"><i data-lucide="atom"></i> React.js</span>
+                        <span class="tech-pill pill-js"><i data-lucide="terminal"></i> JavaScript</span>
+                        <span class="tech-pill pill-api"><i data-lucide="cpu"></i> REST APIs</span>
+                        <span class="tech-pill pill-cloud"><i data-lucide="cloud"></i> AWS / GCP</span>
+                    </div>
+
+                    <!-- Quick Highlight Card Footer -->
+                    <div class="hero-card-footer">
+                        <div class="footer-stat-item">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-desc">Years Dev Exp</span>
+                        </div>
+                        <div class="footer-divider"></div>
+                        <div class="footer-stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-desc">Full Projects</span>
+                        </div>
+                        <div class="footer-divider"></div>
+                        <div class="footer-stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-desc">Clean Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
