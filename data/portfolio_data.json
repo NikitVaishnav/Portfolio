@@ -44,12 +44,12 @@
   "experience": [
     {
       "company": "Appzmine Tech",
-      "role": "Full Stack Web Developer",
+      "role": "Frontend Developer",
       "location": "Remote",
-      "period": "Apr 2025 – Present",
-      "is_current": true,
+      "period": "Feb 2025 – Aug 2025",
+      "is_current": false,
       "type": "Full-time / Remote",
-      "description": "Driving frontend development and API integrations across responsive web applications, collaborating with cross-functional teams to build reliable, high-performance digital products.",
+      "description": "Developed responsive frontend features and integrated APIs across web applications, collaborating with cross-functional teams to deliver polished, reliable user experiences.",
       "achievements": [
         {
           "title": "Frontend Development",
